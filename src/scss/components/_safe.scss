@@ -1,0 +1,54 @@
+.safe {
+  position: relative;
+
+  &__image {
+    filter: grayscale(1);
+  }
+
+  &__logo {
+    margin-right: 70px;
+
+    @include big-desktop {
+      height: 23px;
+      margin-right: 20px;
+      width: 46px;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    background-color: transparent;
+    bottom: 0;
+    display: flex;
+    height: 220px;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+    padding: 65px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__description {
+    color: $white;
+    font-family: 'Prosto', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 44px;
+    margin: 0;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    @include big-desktop {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+  }
+}

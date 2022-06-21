@@ -1,0 +1,113 @@
+.statistic {
+  background-color: #f5f5f5;
+
+  &__container {
+    padding: 140px 0;
+    display: grid;
+    gap: 40px 40px;
+    grid-template-areas:
+        "first first second"
+        "third four five"
+        "six seven seven";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px 400px;
+    width: 100%;
+    max-width: 1280px;
+
+    @include big-desktop {
+      display: flex;
+      overflow-x: scroll;
+      gap: unset;
+      max-width: 320px;
+      padding: 40px 20px;
+    }
+  }
+
+  &__card:first-child {
+    grid-area: first;
+  }
+
+  &__card:nth-child(2) {
+    grid-area: second;
+  }
+
+  &__card:nth-child(3) {
+    grid-area: third;
+  }
+
+  &__card:nth-child(4) {
+    grid-area: four;
+  }
+
+  &__card:nth-child(5) {
+    grid-area: five;
+    background: url('../img/statistic-card.webp') center center no-repeat transparent;
+    background-size: cover;
+    color: $white;
+  }
+
+  &__card:nth-child(6) {
+    grid-area: six;
+  }
+
+  &__card:nth-child(7) {
+    grid-area: seven;
+  }
+}
+
+.statistic-card {
+  position: relative;
+  padding: 40px;
+  background-color: $white;
+
+  @include big-desktop {
+    height: 180px;
+    margin-right: 20px;
+    padding: 20px;
+    width: 180px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__heading {
+    color: inherit;
+    @include ff-prosto;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+    max-width: 570px;
+    text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 17px;
+      overflow-wrap: break-word;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: $gray-soft;
+
+    @include big-desktop {
+      bottom: 20px;
+      font-size: 10px;
+      font-weight: 500;
+      left: 20px;
+      line-height: 15px;
+    }
+  }
+}
+
+.color-red {
+  display: block;
+  color: $red;
+}

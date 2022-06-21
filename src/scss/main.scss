@@ -1,0 +1,47 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+// Главная
+@import "./components/header";
+@import "./components/menu";
+@import "./components/burger";
+@import "./components/hero";
+@import "./components/motoblocks";
+@import "./components/video";
+@import "./components/about";
+@import "./components/safe";
+@import "./components/partners";
+@import "./components/footer";
+
+// Страница каталога
+@import "./components/catalog-hero";
+@import "./components/breadcrumbs";
+@import "./components/catalog";
+@import "./components/help";
+@import "./components/catalog-nav";
+
+// Страница продукта
+@import "./components/single-hero";
+@import "./components/scroll";
+@import "./components/characteristics";
+
+// О компании
+@import "./components/about-hero";
+@import "./components/direction";
+@import "./components/statistic";
+@import "./components/equipment";
+@import "./components/prospects";
+@import "./components/future";
+
+// О бренде
+@import "./components/about-brand";
+@import "./components/technology";
+@import "./components/performance";
+@import "./components/ergonomic";
+
+// Контакты
+@import "./components/contacts";

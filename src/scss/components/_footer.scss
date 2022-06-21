@@ -1,0 +1,139 @@
+.footer {
+  background-color: $black;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @include big-desktop {
+      max-width: 320px;
+      flex-direction: column;
+    }
+  }
+
+  &__top-left {
+    border-right: 1px solid #252525;
+    padding: 100px 100px 100px 0;
+    width: 50%;
+
+    @include big-desktop {
+      width: 100%;
+      padding: 20px;
+      border-right: none;
+    }
+  }
+
+  &__top-right {
+    padding: 100px 0 100px 100px;
+
+    @include big-desktop {
+      padding: 20px;
+    }
+  }
+
+  &__tel {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 500;
+    color: $white;
+
+    @include big-desktop {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $gray-soft;
+
+    @include big-desktop {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+
+  &__line {
+    background-color: #252525;
+    border: none;
+    height: 1px;
+  }
+
+  &__middle {
+    padding: 140px 0;
+
+    @include big-desktop {
+      padding: 20px;
+    }
+  }
+
+  &__middle-left, &__middle-right {
+    flex-basis: 25%;
+  }
+
+  &__list-heading {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__item:last-child {
+    @include big-desktop {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $gray-soft;
+  }
+
+  &__bottom-left {
+    min-width: 325px;
+    padding: 60px 60px 60px 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $gray-soft;
+
+    @include big-desktop {
+      padding: 20px;
+    }
+  }
+
+  &__copyright {
+    color: $gray-soft;
+    text-decoration: underline;
+  }
+
+  &__bottom-right {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    min-width: 325px;
+    padding: 60px 60px 60px 0;
+    color: $gray-soft;
+
+    @include big-desktop {
+      padding: 20px;
+    }
+  }
+}

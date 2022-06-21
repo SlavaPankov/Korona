@@ -1,0 +1,10 @@
+import './components/heroSwiper';
+import './components/partnersSwiper';
+import './components/menuDropdown';
+import './components/burger';
+import './components/aboutDirectionSwiper';
+import './components/futureSwiper';
+import './components/tooltips';
+import './components/contactsMap';
+import './components/scroll3D';
+import './components/youtubeVideo';

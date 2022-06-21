@@ -1,0 +1,46 @@
+.about-hero {
+  &__container {
+    position: relative;
+    max-width: 1280px;
+    margin-top: 120px;
+    min-height: 435px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include desktop {
+      margin-top: 90px;
+    }
+
+    @include big-desktop {
+      max-width: 320px;
+      padding: 0 20px;
+      min-height: 190px;
+    }
+  }
+
+  &__heading {
+    color: $black;
+    display: block;
+    width: 100%;
+    max-width: 625px;
+    margin-top: 60px;
+    margin-bottom: 0;
+    @include ff-prosto;
+    font-size: 56px;
+    line-height: 67px;
+    text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.about-page {
+  overflow-x: hidden;
+}

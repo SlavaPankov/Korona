@@ -1,0 +1,54 @@
+.catalog-hero {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 820px;
+  margin-top: 120px;
+  align-items: center;
+  background-image: url('../img/category-page-bg.webp');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include desktop {
+    margin-top: 90px;
+  }
+
+  @include big-desktop {
+    min-height: 190px;
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1280px;
+    position: relative;
+    width: 100%;
+
+    @include big-desktop {
+      max-width: 320px;
+      padding: 0 20px;
+    }
+
+  }
+
+  &__heading {
+    display: block;
+    width: 100%;
+    max-width: 625px;
+    margin-top: 60px;
+    margin-bottom: 0;
+    @include ff-prosto;
+    font-size: 56px;
+    line-height: 67px;
+    color: $black;
+    text-transform: uppercase;
+
+    @include big-desktop {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 400;
+    }
+  }
+}

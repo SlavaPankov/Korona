@@ -1,0 +1,60 @@
+@mixin btn-primary {
+  border: 1px solid $white;
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 16px;
+  padding: 28px 81px 28px 41px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+  @include desktop {
+    font-size: 14px;
+    letter-spacing: .1em;
+    line-height: 32px;
+    padding: 16px 62px 16px 26px;
+  }
+
+  @include big-desktop {
+    padding: 16px 50px 16px 20px;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+    color: $red;
+    letter-spacing: .1em;
+    border: 1px solid $red;
+  }
+
+
+  &:hover {
+    color: $black;
+    background-color: $white;
+  }
+
+  &:hover svg {
+    fill: $black;
+  }
+}
+
+@mixin btn-icon {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 16px;
+  height: 16px;
+  fill: $white;
+  transition: fill .3s ease-in-out;
+
+  @include big-desktop {
+    right: 26px;
+    fill: $red;
+  }
+}

@@ -1,0 +1,90 @@
+.burger {
+  display: none;
+  position: relative;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+
+  @include big-desktop {
+    display: flex;
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 40px;
+    height: 25px;
+
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $red;
+      transition: width .3s ease-in-out;
+    }
+
+    &::before {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &__line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 3px;
+    background-color: $red;
+    transition: width .3s ease-in-out;
+  }
+}
+
+.burger-menu {
+
+&__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 1280px;
+    transform: translateY(-101%);
+    padding: 160px 20px 24px;
+    background-color: #fff;
+    transition: transform .3s ease-in-out;
+  }
+
+  &__item {
+    white-space: nowrap;
+    width: 25%;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    color: $black;
+  }
+}
+
+.open-btn span {
+  width: 75%;
+}
+
+.open-btn {
+  &::before {
+    width: 50%;
+  }
+}
+
+

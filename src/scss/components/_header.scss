@@ -1,0 +1,200 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  z-index: 10;
+  backdrop-filter: blur(40px);
+  border-color: hsla(0, 0%, 91%, 0.15);
+  background-color: hsla(0,0%,100%,0.08);
+  transition: background-color .3s ease-in-out;
+
+  @include big-desktop {
+    background-color: $red;
+    backdrop-filter: none;
+    min-height: 100px;
+  }
+
+  &__logo {
+    padding: 42px 39px 42px 48px;
+    background-color: $red;
+
+    @include desktop {
+      display: flex;
+      padding: 32px 39px;
+    }
+
+    @include big-desktop {
+      padding: 20px 13px 20px 22px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    @include ff-prosto;
+    font-size: 32px;
+    font-weight: 500;
+    padding-left: 5px;
+    padding-right: 9px;
+    text-transform: uppercase;
+    color: $white;
+
+    @include desktop {
+      display: none;
+    }
+
+    @include big-desktop {
+      display: block;
+      font-size: 26px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-grow: 1;
+    border-left: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    @include big-desktop {
+      justify-content: flex-end;
+      border-left: none;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    border-bottom: 1px solid $border-color;
+    transition: border-color .3s ease-in-out;
+
+    @include big-desktop {
+      display: none;
+    }
+  }
+
+  &__tel-link {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $white;
+  }
+
+  &__btn {
+    transition: color .3s ease-in-out;
+  }
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-start;
+  transition: border-color .3s ease-in-out;
+
+  @include big-desktop {
+    display: none;
+  }
+
+  &__btn-catalog {
+    @include ff-arial;
+    height: 100%;
+    justify-content: center;
+    margin-right: 60px;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1px 60px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    text-align: left;
+    color: $white;
+    text-transform: uppercase;
+    border-right: 1px solid $border-color;
+
+    &::before {
+      content: "";
+      top: 0;
+      width: 6px;
+      height: 6px;
+      margin-right: 26px;
+      background-color: $white;
+      box-shadow: 10px 10px 0 0 $white, 10px 10px 0 0 $white, 10px 0 0 0 $white, 0 10px 0 0 $white;
+      transform: translateY(-6px);
+      transition: box-shadow .3s ease-in-out, background-color .3s ease-in-out;
+    }
+  }
+
+  &__btn-company {
+    @include ff-arial;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 40px;
+    padding-right: 16px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: $white;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-80%) rotate(45deg);
+      width: 6px;
+      height: 6px;
+      border-bottom: 2px solid $white;
+      border-right: 2px solid $white;
+      transition: border-color .3s ease-in-out, transform .3s ease-in-out;
+    }
+  }
+
+  &__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    color: $white;
+  }
+}
+
+.invert-bg {
+  background-color: $white;
+  border-bottom-color: $line-soft;
+}
+
+.invert-color {
+  color: $black;
+  border-color: $line-soft;
+
+  &::after {
+    border-color: $black;
+  }
+
+  &::before {
+    background-color: $red;
+    box-shadow: 10px 10px 0 0 $red, 10px 10px 0 0 $red, 10px 0 0 0 $red, 0 10px 0 0 $red;
+  }
+}
+
+.arrow-rotate {
+  &::after {
+    transform: translateY(-40%) rotate(225deg);
+  }
+}

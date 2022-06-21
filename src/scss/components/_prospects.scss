@@ -1,0 +1,133 @@
+.prospects {
+  position: relative;
+
+  &__container {
+    max-width: 1280px;
+    width: 100%;
+
+    @include big-desktop {
+      max-width: 310px;
+      padding: 0 20px;
+    }
+  }
+
+  &__heading {
+    @include heading;
+    margin-bottom: 100px;
+
+    @include big-desktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__picture {
+    display: none;
+
+    &[data-active=true] {
+      display: block;
+    }
+  }
+
+  &__picture img {
+    min-height: 325px;
+  }
+
+  &__img-container {
+    position: relative;
+
+    @include big-desktop {
+      min-height: 325px;
+    }
+  }
+
+  &__images {
+    position: relative;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+
+  }
+}
+
+.prospects-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 530px;
+  height: 555px;
+  padding: 60px;
+  background-color: $red;
+
+  @include big-desktop {
+    height: 286px;
+    left: 20px;
+    padding: 20px;
+    width: 220px;
+  }
+
+  &__item {
+    opacity: .5;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__item:hover &__title {
+    text-decoration: underline;
+  }
+
+  &__title {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    @include ff-prosto;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $white;
+
+    @include big-desktop {
+      font-size: 10px;
+      line-height: 14px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.visible {
+  opacity: 1;
+}

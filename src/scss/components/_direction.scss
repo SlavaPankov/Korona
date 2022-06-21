@@ -1,0 +1,126 @@
+.direction {
+
+  &__container {
+    position: relative;
+    padding-top: 140px;
+    max-width: 1280px;
+    width: 100%;
+
+    @include big-desktop {
+      max-width: 320px;
+      padding: 40px 20px 0;
+    }
+  }
+
+  &__heading {
+    @include heading;
+    margin-bottom: 100px;
+
+    @include big-desktop {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.direction-swiper {
+  position: relative;
+
+  &__heading {
+    @include ff-prosto;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80px;
+    width: 100%;
+    z-index: 2;
+
+    @include big-desktop {
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    height: 11px;
+    width: 30px;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNLjY0IDE2LjY0aDI3Ljg5NWwtNC4wMjggNC4wMjcuOTA1LjkwNUwzMC45ODUgMTZsLTUuNTczLTUuNTcyLS45MDUuOTA0IDQuMDI4IDQuMDI4SC42NHYxLjI4WiIvPjwvc3ZnPg==');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__button-prev {
+    transform: rotate(180deg);
+  }
+
+  &__pagination {
+    position: absolute;
+    left: auto !important;
+    right: 40px;
+    bottom: 35px !important;
+    color: $white;
+    max-width: fit-content;
+
+    @include big-desktop {
+      right: 20px;
+      bottom: 15px !important;
+    }
+  }
+}
+
+.swiper-mini {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  background: $red;
+  max-width: 530px;
+
+  @include big-desktop {
+    position: relative !important;
+    max-width: 100%;
+  }
+
+  &__heading {
+    @include ff-prosto;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      min-height: 72px;
+    }
+  }
+
+  &__content {
+    padding: 40px 40px 120px;
+
+    @include big-desktop {
+      padding: 20px 20px 60px;
+    }
+  }
+}
+
+.direction-list {
+  padding: 40px 0;
+
+  & li {
+  }
+}

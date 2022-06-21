@@ -1,0 +1,102 @@
+.hero {
+  position: relative;
+
+  &__block {
+    @include ff-prosto;
+    position: absolute;
+    top: clamp(160px,160px + 221*(100vw - 320px)/1920,381px);
+    right: 0;
+    left: -385px;
+    margin: auto;
+    max-width: 730px;
+    padding: 24px 0 17px 60px;
+    font-size: clamp(24px,24px + 46*(100vw - 320px)/1920,64px);
+    line-height: clamp(28px,28px + 62*(100vw - 320px)/1920,84px);
+    font-weight: 400;
+    color: $white;
+    backdrop-filter: blur(40px);
+    background-image: linear-gradient(91.91deg,hsla(0,0%,100%,.2) -21.88%,hsla(0,0%,100%,.04) 116.93%);
+    border: 1px solid rgba(255,255,255,.15);
+    text-transform: uppercase;
+    z-index: 3;
+
+    @include big-desktop {
+      left: 0;
+      margin: 0 16px;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    max-height: 940px;
+    min-height: 568px;
+    width: 100vw;
+    object-position: right;
+  }
+
+  &__heading, &__sunheading {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  &__subheading {
+    font-size: clamp(24px,24px + 46*(100vw - 320px)/1920,28px);
+    line-height: clamp(28px,28px + 62*(100vw - 320px)/1920,64px);
+    color: rgba(255,255,255,.7);
+  }
+}
+
+.hero-swiper {
+  position: relative;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 120px);
+    z-index: 2;
+  }
+
+  &__btn {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    padding: 9px 12px;
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+
+    @include big-desktop {
+      display: none;
+    }
+  }
+
+  &__btn-prev {
+    transform: rotate(180deg);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    fill: $white;
+  }
+
+  &__slide-wrapper {
+    max-height: 940px;
+    min-height: 568px;
+    width: 100vw;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: .33 !important;
+}

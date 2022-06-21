@@ -1,0 +1,179 @@
+.motoblocks {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding: 100px 100px 0;
+
+  @include desktop {
+    padding: 0;
+  }
+
+  @include big-desktop {
+    padding: 40px 20px 0;
+  }
+}
+
+.motoblock {
+  position: relative;
+  margin-bottom: 100px;
+  color: $white;
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+
+  @include big-desktop {
+    display: flex;
+    flex-direction: column-reverse;
+    color: $black-soft;
+    margin-bottom: 40px;
+  }
+
+  &__heading {
+    @include ff-prosto;
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 56px;
+    line-height: 78px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: clamp(40px,40px + 16*(100vw - 320px)/1920,56px);
+      line-height: clamp(56px,40px + 16*(100vw - 320px)/1920,78px);
+      margin-bottom: 20px;
+    }
+
+    @include big-desktop {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__subheading {
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    text-align: left;
+
+    @include desktop {
+      font-size: clamp(16px,16px + 4*(100vw - 320px)/1920,20px);
+      line-height: clamp(24px,24px + 8*(100vw - 320px)/1920,32px);
+      margin-bottom: 20px;
+    }
+
+    @include big-desktop {
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+  }
+
+  &__link {
+    @include btn-primary;
+  }
+
+  &__link-icon {
+    @include btn-icon;
+  }
+
+  &__top {
+    position: absolute;
+    top: 0;
+    max-width: 890px;
+    padding: 100px 0 0 220px;
+    z-index: 1;
+
+    @include desktop {
+      max-width: 745px;
+      padding-left: 100px;
+      padding-top: 80px;
+    }
+
+    @include big-desktop {
+      position: relative;
+      padding: 0;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    bottom: 100px;
+    left: 220px;
+
+    @include desktop {
+      bottom: 70px;
+      left: 100px;
+    }
+
+    @include big-desktop {
+      position: relative;
+    }
+  }
+}
+
+.motoblock-list {
+  display: flex;
+
+  @include big-desktop {
+    bottom: unset;
+    flex-wrap: wrap;
+    left: unset;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+  }
+
+
+  &__item {
+    position: relative;
+    min-width: 280px;
+    margin-right: 40px;
+
+    @include desktop {
+      min-width: 240px;
+    }
+  }
+
+  &__numeric {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 44px;
+    line-height: 62px;
+    font-weight: 400;
+    color: $white;
+
+    @include desktop {
+      font-size: 32px;
+      line-height: 45px;
+      margin-bottom: 14px;
+    }
+
+    @include big-desktop {
+      color: $black;
+    }
+  }
+
+  &__text {
+    position: relative;
+    display: flex;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: $white;
+
+    @include desktop {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 17px;
+    }
+
+    @include big-desktop {
+      color: $black;
+    }
+  }
+}

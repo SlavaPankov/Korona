@@ -1,0 +1,111 @@
+.equipment {
+  &__container {
+    max-width: 1280px;
+    padding: 140px 0;
+
+    @include big-desktop {
+      max-width: 320px;
+      padding: 40px 20px;
+    }
+  }
+
+  &__heading {
+    @include heading;
+    margin-bottom: 100px;
+
+    @include big-desktop {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.equipment-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  @include big-desktop {
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-right: 20px;
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+
+    @include big-desktop {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &__item:nth-child(2n) {
+    margin-left: 20px;
+    margin-right: 0;
+
+    @include big-desktop {
+      margin-left: 0;
+    }
+  }
+}
+
+.equipment-card {
+  &__heading {
+    display: block;
+    padding: 40px 0 20px;
+    min-height: 165px;
+    @include ff-prosto;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 17px;
+      min-height: 70px;
+      padding: 20px 0 10px;
+    }
+  }
+
+  &__description {
+    position: relative;
+    min-height: 90px;
+    padding-bottom: 40px;
+    padding-right: 80px;
+    font-size: 18px;
+    line-height: 25px;
+    color: $gray;
+    border-bottom: 1px solid $gray-soft;
+
+    @include big-desktop {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      min-height: 45px;
+      padding: 10px 40px 21px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 40px;
+      right: 0;
+      height: 40px;
+      width: 40px;
+      border: 1px solid $red;
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDEyIDEyIj48ZyBjbGlwLXBhdGg9InVybCgjcHJlZml4X19hKSI+PHBhdGggZmlsbD0iI0Q0MTEyMSIgZD0iTTExLjE2IDkuNDIgNiA0LjI2Ljg0IDkuNDIgMCA4LjU4bDYtNiA2IDYtLjg0Ljg0WiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9InByZWZpeF9fYSI+PHJlY3Qgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjZmZmIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDEyKSIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==");
+      background-position: 50%;
+      background-repeat: no-repeat;
+
+      @include big-desktop {
+        bottom: 20px;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}

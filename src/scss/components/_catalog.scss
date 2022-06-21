@@ -1,0 +1,127 @@
+.catalog {
+  &__container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    padding: 120px 0;
+
+    @include big-desktop {
+      max-width: 320px;
+      padding: 40px 20px 0;
+    }
+  }
+}
+
+.catalog-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include big-desktop {
+    flex-direction: column;
+  }
+
+  &__item {
+    border-left: 1px solid $line-soft;
+    border-right: 1px solid $line-soft;
+    border-top: 1px solid $line-soft;
+    justify-content: center;
+    width: 34%;
+
+    @include big-desktop {
+      width: 100%;
+    }
+  }
+
+  &__item:nth-child(4n+0), &__item:nth-child(4n+1) {
+    width: 66%;
+
+    @include big-desktop {
+      width: 100%;
+    }
+  }
+
+  &__item:last-child, &__item:nth-last-child(2) {
+    border-bottom: 1px solid $line-soft;
+  }
+
+  &__item:nth-child(2n) {
+    border-left: 0;
+
+    @include big-desktop {
+      border-left: 1px solid $line-soft;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__name {
+    margin-bottom: 20px;
+    @include ff-prosto;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+    color: $black;
+    text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    border-top: 1px solid $line-soft;
+    padding: 40px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__link  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    color: $red;
+
+    @include big-desktop {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 6px;
+      margin-left: 8px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI3IiBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMTIgNyI+PHBhdGggZmlsbD0iI0Q0MTEyMSIgZD0iTTkuMDA4IDIuNUgwVjRoOS4wMDh2Mi4yNWwyLjk5Mi0zLTIuOTkyLTNWMi41WiIvPjwvc3ZnPg==");
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 380px;
+    width: 387px;
+    margin: 20px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include big-desktop {
+      height: 200px;
+      width: 280px;
+    }
+  }
+}
+

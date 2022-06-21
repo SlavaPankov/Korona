@@ -1,0 +1,110 @@
+.partners {
+  &__container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 140px 0;
+
+    @include big-desktop {
+      max-width: 320px;
+      padding: 40px 20px;
+      position: relative;
+    }
+  }
+
+  &__heading {
+    @include ff-prosto;
+    max-width: 400px;
+    padding-bottom: 140px;
+    color: $black;
+    font-size: 56px;
+    line-height: 67px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 24px;
+      line-height: 29px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__image {
+    @include big-desktop {
+      padding: 0 20px;
+      max-width: 99px;
+      display: block;
+    }
+  }
+}
+
+.partners-swiper {
+  border-top: 1px solid #e9e9e9;
+  margin-top: 80px;
+
+  @include big-desktop {
+    margin-top: 0;
+  }
+
+  &__wrapper {
+    padding-top: 80px;
+
+    @include big-desktop {
+      padding: 20px 0 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    max-width: 140px;
+    justify-content: space-between;
+
+    @include big-desktop {
+      display: none;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 1px solid #e9e9e9;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    fill: $black;
+  }
+
+  &__buttons-prev {
+    transform: rotate(180deg);
+  }
+
+  &__slide {
+    max-width: 315px;
+    min-height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $line-soft;
+    border-right: none;
+
+    @include big-desktop {
+      min-height: 140px;
+    }
+
+    &:last-child {
+      border-right: 1px solid $line-soft;
+    }
+  }
+}
+
+.swiper-button-lock {
+  display: flex !important;
+}
